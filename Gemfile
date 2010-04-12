@@ -24,3 +24,17 @@ gem 'mysql'
 # group :test do
 #   gem 'webrat'
 # end
+
+gem 'authlogic', :git => 'http://github.com/odorcicd/authlogic.git', :branch => "rails3"
+gem 'mongrel', :group => :development
+group :test do
+  gem "rspec-rails", ">= 2.0.0.beta.1"
+  gem 'ruby-debug'
+  gem 'factory_girl', :git => 'git://github.com/szimek/factory_girl.git', :branch => 'rails3'
+  gem 'capybara'
+  gem 'database_cleaner'
+  gem 'cucumber-rails'
+  gem 'mocha'
+  gem 'autotest-rails'
+  gem 'ZenTest'
+end
