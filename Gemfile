@@ -28,12 +28,12 @@ gem 'mysql'
 gem 'authlogic', :git => 'http://github.com/odorcicd/authlogic.git', :branch => "rails3"
 gem 'mongrel', :group => :development
 group :test do
-  gem "rspec-rails", ">= 2.0.0.beta.1"
+  gem "rspec-rails", ">= 2.0.0.beta.1", :git => "git://github.com/rspec/rspec-rails.git"
   gem 'ruby-debug'
   gem 'factory_girl', :git => 'git://github.com/szimek/factory_girl.git', :branch => 'rails3'
-  gem 'capybara'
-  gem 'database_cleaner'
-  gem 'cucumber-rails'
+  gem 'capybara', :git => "git://github.com/jnicklas/capybara.git"
+  gem 'database_cleaner', :git => "git://github.com/bmabey/database_cleaner.git"
+  gem 'cucumber-rails', :git => "git://github.com/aslakhellesoy/cucumber-rails.git"
   gem 'mocha'
   gem 'autotest-rails'
   gem 'ZenTest'
