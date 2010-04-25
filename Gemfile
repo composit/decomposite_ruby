@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.beta2'
+gem 'rails', '3.0.0.beta3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -26,9 +26,13 @@ gem 'mysql'
 # end
 
 gem 'authlogic', :git => 'http://github.com/odorcicd/authlogic.git', :branch => "rails3"
+gem 'oauth'
+gem "authlogic-oauth"
+gem "cancan"
+
 gem 'mongrel', :group => :development
 group :test do
-  gem "rspec-rails", ">= 2.0.0.beta.1", :git => "git://github.com/rspec/rspec-rails.git"
+  gem "rspec-rails", ">= 2.0.0.beta.7", :git => "git://github.com/rspec/rspec-rails.git"
   gem 'ruby-debug'
   gem 'factory_girl', :git => 'git://github.com/szimek/factory_girl.git', :branch => 'rails3'
   gem 'capybara', :git => "git://github.com/jnicklas/capybara.git"

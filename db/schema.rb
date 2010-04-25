@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100414024814) do
+ActiveRecord::Schema.define(:version => 20100425163033) do
 
   create_table "post_tags", :force => true do |t|
     t.integer  "post_id"
@@ -39,10 +39,10 @@ ActiveRecord::Schema.define(:version => 20100414024814) do
   add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
 
   create_table "users", :force => true do |t|
-    t.string   "login",                              :null => false
+    t.string   "login"
     t.string   "email",                              :null => false
-    t.string   "crypted_password",                   :null => false
-    t.string   "password_salt",                      :null => false
+    t.string   "crypted_password"
+    t.string   "password_salt"
     t.string   "persistence_token",                  :null => false
     t.string   "single_access_token",                :null => false
     t.string   "perishable_token",                   :null => false
@@ -55,6 +55,10 @@ ActiveRecord::Schema.define(:version => 20100414024814) do
     t.string   "last_login_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "oauth_token"
+    t.string   "oauth_secret"
   end
+
+  add_index "users", ["oauth_token"], :name => "index_users_on_oauth_token"
 
 end

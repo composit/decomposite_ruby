@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
   end
 
   attr_accessible :login, :email, :password, :password_confirmation
+
+  validates_presence_of :login, :email, :crypted_password, :password_salt
 end
