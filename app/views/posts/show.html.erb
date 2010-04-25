@@ -1,0 +1,6 @@
+<div class="post">
+  <%= @post.content %>
+  <div class="poster"><%= @post.user.login %></div>
+</div>
+
+<%= link_to 'Back', posts_path %>

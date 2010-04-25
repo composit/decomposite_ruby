@@ -1,0 +1,9 @@
+div.post {
+  width: 100%;
+  }
+
+  div.post div.poster {
+    font-size: .8em;
+    font-weight: bold;
+    text-align: right;
+  }

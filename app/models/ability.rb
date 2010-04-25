@@ -2,10 +2,11 @@ class Ability
   include CanCan::Ability
 
   def initialize( user )
-    can :read, :all
-    can :create, Post do |post|
-      post.user_id = user.id
-    end
+    user ||= User.new # guest user
+
+    can :create, Post, :user_id => user.id
+    can :new, Post
     can :manage, User, :id => user.id
+    can :read, :all
   end
 end

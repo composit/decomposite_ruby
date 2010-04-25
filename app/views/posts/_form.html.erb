@@ -1,18 +1,19 @@
 <%= form_for(@post) do |f| %>
-  <% if @something.errors.any? %>
-  <div id="errorExplanation">
-    <h2><%= pluralize(@something.errors.count, "error") %> prohibited this something from being saved:</h2>
-    <ul>
-    <% @something.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
+  <% if @post.errors.any? %>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
 
   <div class="field">
     <%= f.label :content %><br />
     <%= f.text_field :content %>
+    <%= f.hidden_field :user_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

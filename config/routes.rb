@@ -2,7 +2,7 @@ Decomposite::Application.routes.draw do |map|
   resources :user_session
   resources :users
   resources :posts
-  root :to => 'user_sessions#new'
+  root :to => 'posts#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

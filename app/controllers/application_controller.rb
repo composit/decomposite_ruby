@@ -23,15 +23,6 @@ class ApplicationController < ActionController::Base
       end
     end
 
-    def require_no_user
-      if( current_user )
-        store_location
-        flash[:notice] = "You must be logged out to access this page"
-        redirect_back_or_default( root_url )
-        return false
-      end
-    end
-
     def store_location
       if( request.get? )
         session[:return_to] = request.request_uri
